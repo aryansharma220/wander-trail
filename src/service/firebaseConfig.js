@@ -11,7 +11,7 @@ const FIREBASE_API_KEY = import.meta.env.VITE_FIREBASE_API_KEY;
 const FIREBASE_AUTH_DOMAIN = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN;
 const FIREBASE_APP_ID = import.meta.env.VITE_FIREBASE_APP_ID;
 
-const firebaseConfig = {
+const firebaseconfig = {
   apiKey: FIREBASE_API_KEY,
   authDomain: FIREBASE_AUTH_DOMAIN,
   projectId: "wander-trail",
@@ -22,6 +22,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseconfig);
 export const db = getFirestore(app);
 // const analytics = getAnalytics(app);
