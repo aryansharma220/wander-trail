@@ -8,20 +8,18 @@ import { getFirestore } from "firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const FIREBASE_API_KEY = import.meta.env.VITE_FIREBASE_API_KEY;
-const FIREBASE_AUTH_DOMAIN = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN;
-const FIREBASE_APP_ID = import.meta.env.VITE_FIREBASE_APP_ID;
 
-const firebaseconfig = {
+const firebaseConfig = {
   apiKey: FIREBASE_API_KEY,
-  authDomain: FIREBASE_AUTH_DOMAIN,
+  authDomain: "wander-trail.firebaseapp.com",
   projectId: "wander-trail",
   storageBucket: "wander-trail.firebasestorage.app",
   messagingSenderId: "227035525715",
-  appId: FIREBASE_APP_ID,
+  appId: "1:227035525715:web:ca3545f95d269a5c55cca6",
   measurementId: "G-9NPQC76Q6D"
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseconfig);
+export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 // const analytics = getAnalytics(app);
