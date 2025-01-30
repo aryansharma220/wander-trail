@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { Input } from "@/components/ui/input";
+import firebaseConfig from "@/service/firebaseConfig";
 import {
   AI_PROMPT,
   SelectBudgetOptions,
