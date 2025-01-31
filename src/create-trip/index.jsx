@@ -128,34 +128,34 @@ const CreateTrip = () => {
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="sm:px-10 md:px-32 lg:px-56 xl:px-72 px-5 py-16 max-w-8xl mx-auto"
+        className="px-4 sm:px-6 md:px-12 lg:px-24 xl:px-48 py-8 sm:py-12 md:py-16 max-w-8xl mx-auto"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="font-bold text-5xl text-gray-800 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+          <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl text-gray-800 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
             Plan Your Dream Journey ⛺🌴
           </h2>
-          <p className="mt-6 text-gray-600 text-xl leading-relaxed max-w-3xl mx-auto">
+          <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto px-4">
             Let us help you create the perfect itinerary for your next adventure.
             Just tell us your preferences, and we'll handle the rest.
           </p>
         </motion.div>
 
-        <div className="mt-16 flex flex-col gap-12">
+        <div className="mt-8 sm:mt-12 md:mt-16 flex flex-col gap-6 sm:gap-8 md:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300"
+            className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300"
           >
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 sm:mb-6">
               Destination Details
             </h2>
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
                 <label className="text-lg font-medium text-gray-700 mb-3 block">
                   What is your destination of choice?
@@ -186,27 +186,27 @@ const CreateTrip = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300"
+            className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300"
           >
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 sm:mb-6">
               Budget Selection
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {SelectBudgetOptions.map((item, index) => (
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   key={index}
                   onClick={() => handleInputChange("budget", item.title)}
-                  className={`p-6 rounded-xl border-2 transition-all duration-200 cursor-pointer hover:shadow-md ${
+                  className={`p-4 sm:p-6 rounded-xl border-2 transition-all duration-200 cursor-pointer hover:shadow-md ${
                     formData?.budget === item.title
                       ? "border-blue-500 bg-blue-50/50"
                       : "border-gray-200 hover:border-gray-300"
                   }`}
                 >
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h2 className="text-xl font-bold text-gray-800">{item.title}</h2>
-                  <p className="text-gray-600 mt-2">{item.desc}</p>
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{item.icon}</div>
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-800">{item.title}</h2>
+                  <p className="text-sm sm:text-base text-gray-600 mt-2">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -216,27 +216,27 @@ const CreateTrip = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
-            className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300"
+            className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300"
           >
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 sm:mb-6">
               Travel Companions
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {SelectTravelesList.map((item, index) => (
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   key={index}
                   onClick={() => handleInputChange("traveler", item.people)}
-                  className={`p-6 rounded-xl border-2 transition-all duration-200 cursor-pointer hover:shadow-md ${
+                  className={`p-4 sm:p-6 rounded-xl border-2 transition-all duration-200 cursor-pointer hover:shadow-md ${
                     formData?.traveler === item.people
                       ? "border-blue-500 bg-blue-50/50"
                       : "border-gray-200 hover:border-gray-300"
                   }`}
                 >
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h2 className="text-xl font-bold text-gray-800">{item.title}</h2>
-                  <p className="text-gray-600 mt-2">{item.desc}</p>
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{item.icon}</div>
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-800">{item.title}</h2>
+                  <p className="text-sm sm:text-base text-gray-600 mt-2">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -247,15 +247,15 @@ const CreateTrip = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="my-12 flex justify-center"
+          className="my-8 sm:my-12 flex justify-center"
         >
           <Button
             disabled={loading}
             onClick={onGenerateTrip}
-            className="text-lg px-12 py-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+            className="text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto"
           >
             {loading ? (
-              <AiOutlineLoading3Quarters className="h-6 w-6 animate-spin" />
+              <AiOutlineLoading3Quarters className="h-5 w-5 sm:h-6 sm:w-6 animate-spin" />
             ) : (
               "Generate Your Perfect Trip ✈️"
             )}
@@ -263,19 +263,19 @@ const CreateTrip = () => {
         </motion.div>
 
         <Dialog open={openDialog}>
-          <DialogContent className="sm:max-w-md rounded-2xl bg-white/90 backdrop-blur-sm">
-            <DialogHeader className="space-y-6 text-center p-6">
-              <img className="w-48 mx-auto" src="src/assets/logo.png" alt="" />
+          <DialogContent className="sm:max-w-md rounded-2xl bg-white/90 backdrop-blur-sm mx-4">
+            <DialogHeader className="space-y-4 sm:space-y-6 text-center p-4 sm:p-6">
+              <img className="w-32 sm:w-48 mx-auto" src="src/assets/logo.png" alt="" />
               <div>
-                <h2 className="font-bold text-2xl text-gray-800">Sign In With Google</h2>
-                <p className="text-gray-600 mt-2">Sign in securely with Google authentication</p>
+                <h2 className="font-bold text-xl sm:text-2xl text-gray-800">Sign In With Google</h2>
+                <p className="text-sm sm:text-base text-gray-600 mt-2">Sign in securely with Google authentication</p>
               </div>
               <Button
                 disabled={loading}
                 onClick={login}
-                className="w-full py-6 text-lg flex gap-4 items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
+                className="w-full py-4 sm:py-6 text-base sm:text-lg flex gap-3 sm:gap-4 items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
               >
-                <FcGoogle className="h-6 w-6" /> Sign in With Google
+                <FcGoogle className="h-5 w-5 sm:h-6 sm:w-6" /> Sign in With Google
               </Button>
             </DialogHeader>
           </DialogContent>

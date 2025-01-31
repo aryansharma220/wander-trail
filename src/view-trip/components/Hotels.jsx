@@ -52,19 +52,19 @@ const Hotels = ({ trip }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="p-6 bg-gradient-to-br from-gray-50 to-white "
+      className="p-4 sm:p-6 bg-gradient-to-br from-gray-50 to-white"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div>
-            <h2 className="font-bold text-3xl text-gray-800 tracking-tight">
+            <h2 className="font-bold text-2xl sm:text-3xl text-gray-800 tracking-tight">
               Hotel Recommendations
             </h2>
-            <p className="text-gray-500 mt-2">Find your perfect stay</p>
+            <p className="text-sm sm:text-base text-gray-500 mt-1 sm:mt-2">Find your perfect stay</p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto">
             <select 
-              className="px-4 py-2.5 rounded-lg border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm text-gray-700 font-medium hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+              className="flex-1 sm:flex-none px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm text-sm sm:text-base text-gray-700 font-medium hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
               onChange={handleSortChange}
               value={sortBy}
             >
@@ -74,14 +74,14 @@ const Hotels = ({ trip }) => {
             </select>
             <button
               onClick={() => setSortDirection(prev => prev === 'asc' ? 'desc' : 'asc')}
-              className="p-2.5 rounded-lg border border-gray-200 bg-white/80 hover:border-gray-300 transition-all duration-200"
+              className="p-2 sm:p-2.5 rounded-lg border border-gray-200 bg-white/80 hover:border-gray-300 transition-all duration-200"
             >
               {sortDirection === 'asc' ? '↑' : '↓'}
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {sortedHotels.map((hotel, index) => (
             <motion.div
               key={index}

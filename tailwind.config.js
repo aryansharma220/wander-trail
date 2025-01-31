@@ -68,7 +68,10 @@ export default {
       animation: {
         'fade-in': 'fade-in 0.6s ease-out',
         'fade-in-delay': 'fade-in-delay 1s ease-out'
-      }
+      },
+			screens: {
+        'xs': '300px',
+      },
   	}
   },
   plugins: [
